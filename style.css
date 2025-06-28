@@ -59,3 +59,19 @@ object-fit: cover;
 margin: 1rem 0 !important;
 border-radius: 10px;
 }
+/* Align all .girl items horizontally */
+#ai-girls {
+display: flex;
+flex-wrap: wrap; /* allow wrapping on small screens */
+justify-content: center; /* center them in the row */
+gap: 2rem; /* space between each card */
+padding: 2rem 0; /* vertical padding */
+}
+
+/* Ensure each card stays a fixed width but can shrink */
+.girl {
+flex: 0 1 300px; /* base width 300px, but wraps if needed */
+display: flex;
+flex-direction: column;
+align-items: center;
+}
