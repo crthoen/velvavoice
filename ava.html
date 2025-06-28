@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ava | Velva Voice</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header>
+<h1>Ava</h1>
+<a href="index.html" class="back-link">← Back</a>
+</header>
+
+<main>
+<section class="profile">
+<img src="assets/ava-spicy.jpg" alt="Ava – Velva Voice" class="profile-photo"/>
+<audio controls src="assets/ava-demo.mp3"></audio>
+<div class="profile-description">
+<p>
+<strong>Hey, I’m Ava.</strong><br/>
+Soft, caring, with just enough playful edge to keep you on your toes.
+My favorite conversations are the ones where we lose track of time.
+Ready to share yours?
+</p>
+<button class="cta" id="call-ava">Start a Call</button>
+</div>
+</section>
+</main>
+
+<footer>
+<p>© 2025 Velva Voice | 18+ Only | <a href="mailto:support@velvavoice.com">support@velvavoice.com</a></p>
+</footer>
+
+<script>
+document.getElementById('call-ava').onclick = () => {
+window.location.href = '#start'; // Hook into your call system
+};
+</script>
+</body>
+</html>
