@@ -76,3 +76,18 @@ flex: 0 1 300px !important; /* exactly two across on desktop */
 max-width: 300px !important;
 margin: 0 !important;
 }
+/* Override: center “Meet Your Fantasy” above the flex row */
+#ai-girls {
+display: flex !important;
+flex-direction: row !important;
+flex-wrap: wrap !important;
+justify-content: center !important;
+align-items: flex-start !important;
+}
+
+#ai-girls > h2 {
+order: -1 !important; /* move it before the .girl items */
+flex: 0 0 100% !important; /* span full width */
+text-align: center !important;
+margin-bottom: 1.5rem !important;
+}
