@@ -59,19 +59,20 @@ object-fit: cover;
 margin: 1rem 0 !important;
 border-radius: 10px;
 }
-/* Align all .girl items horizontally */
+/* Force horizontal layout in the “Meet Your Fantasy” section */
 #ai-girls {
-display: flex;
-flex-wrap: wrap; /* allow wrapping on small screens */
-justify-content: center; /* center them in the row */
-gap: 2rem; /* space between each card */
-padding: 2rem 0; /* vertical padding */
+display: flex !important;
+flex-direction: row !important;
+flex-wrap: wrap !important;
+justify-content: center !important;
+align-items: flex-start !important;
+gap: 2rem !important;
+padding: 2rem 0 !important;
 }
 
-/* Ensure each card stays a fixed width but can shrink */
-.girl {
-flex: 0 1 300px; /* base width 300px, but wraps if needed */
-display: flex;
-flex-direction: column;
-align-items: center;
+/* Fix each card’s width so they sit side by side */
+#ai-girls .girl {
+flex: 0 1 300px !important; /* exactly two across on desktop */
+max-width: 300px !important;
+margin: 0 !important;
 }
