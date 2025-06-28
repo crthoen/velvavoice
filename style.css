@@ -93,7 +93,7 @@ margin-bottom: 1.5rem !important;
 }
 /* Luxury header background */
 .site-header {
-background: url('assets/header-bg-1.jpg') center/cover no-repeat;
+background: url('assets/header.png') center/cover no-repeat;
 height: 60vh;
 position: relative;
 display: flex;
