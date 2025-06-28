@@ -33,3 +33,20 @@ footer {
 audio {
     margin-top: 1rem;
 }
+/* Constrain portrait teasers on homepage */
+.girl-photo {
+width: 100%;
+max-width: 300px; /* adjust this to taste */
+height: auto;
+display: block;
+margin: 0.5rem auto; /* center and add vertical spacing */
+}
+
+/* Constrain full profile images */
+.profile-photo {
+width: 100%;
+max-width: 400px; /* profile pages can be a bit larger */
+height: auto;
+display: block;
+margin: 1rem auto;
+}
