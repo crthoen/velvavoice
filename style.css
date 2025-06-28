@@ -33,20 +33,29 @@ footer {
 audio {
     margin-top: 1rem;
 }
-/* Constrain portrait teasers on homepage */
-.girl-photo {
-width: 100%;
-max-width: 300px; /* adjust this to taste */
-height: auto;
-display: block;
-margin: 0.5rem auto; /* center and add vertical spacing */
+/* Ensure .girl and .profile containers center their content */
+.girl, .profile {
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
-/* Constrain full profile images */
+/* Constrain and center teaser portraits */
+.girl-photo {
+width: 100% !important;
+max-width: 300px !important;
+height: auto !important;
+object-fit: cover;
+margin: 0.5rem 0 !important;
+border-radius: 10px;
+}
+
+/* Constrain and center full profile portraits */
 .profile-photo {
-width: 100%;
-max-width: 400px; /* profile pages can be a bit larger */
-height: auto;
-display: block;
-margin: 1rem auto;
+width: 100% !important;
+max-width: 400px !important;
+height: auto !important;
+object-fit: cover;
+margin: 1rem 0 !important;
+border-radius: 10px;
 }
