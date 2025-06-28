@@ -1,0 +1,41 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Naomi | Velva Voice</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header>
+<h1>Naomi</h1>
+<a href="index.html" class="back-link">← Back</a>
+</header>
+
+<main>
+<section class="profile">
+<img src="assets/naomi-spicy.jpg" alt="Naomi – Velva Voice" class="profile-photo"/>
+<audio controls src="assets/naomi-demo.mp3"></audio>
+<div class="profile-description">
+<p>
+<strong>Hi, I’m Naomi.</strong><br/>
+Confident, flirty, with a hint of mystery.
+My voice is the spark—let’s see where our conversation ignites.
+Dare to find out?
+</p>
+<button class="cta" id="call-naomi">Start a Call</button>
+</div>
+</section>
+</main>
+
+<footer>
+<p>© 2025 Velva Voice | 18+ Only | <a href="mailto:support@velvavoice.com">support@velvavoice.com</a></p>
+</footer>
+
+<script>
+document.getElementById('call-naomi').onclick = () => {
+window.location.href = '#start'; // Hook into your call system
+};
+</script>
+</body>
+</html>
