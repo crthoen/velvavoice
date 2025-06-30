@@ -76,17 +76,17 @@ from ace_tools import display_dataframe_to_user
 import pandas as pd
   /* Make Ava & Naomi cards smaller & uniform */
 #ai-girls .girl {
-/* shrink basis from 300px → 200px */
-flex: 0 1 200px !important;
-max-width: 200px !important;
+/* shrink basis from 200px → 150px */
+flex: 0 1 150px !important;
+max-width: 150px !important;
 margin: 0 auto !important; /* center each card */
 }
 
-/* Force each portrait to fill its 200px container */
+/* Force each portrait to fill its 150px container */
 #ai-girls .girl-photo {
 width: 100% !important;
 height: auto !important;
-max-width: 200px !important;
+max-width: 150px !important;
 object-fit: cover;
 border-radius: 10px;
 margin: 0.5rem 0 !important;
