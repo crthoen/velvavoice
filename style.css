@@ -74,19 +74,19 @@ color: white !important;
 flex-shrink: 0 !important; /* Ensure override also prevents shrinking */
 from ace_tools import display_dataframe_to_user
 import pandas as pd
-  /* Make Ava & Naomi cards smaller & uniform */
+ /* ⚡️ Shrink the Ava & Naomi cards way down ⚡️ */
 #ai-girls .girl {
-/* shrink basis from 200px → 150px */
-flex: 0 1 150px !important;
-max-width: 150px !important;
-margin: 0 auto !important; /* center each card */
+/* Fix each card at 120px wide */
+flex: 0 0 120px !important;
+max-width: 120px !important;
+margin: 0 auto !important; /* keep them centered */
 }
 
-/* Force each portrait to fill its 150px container */
 #ai-girls .girl-photo {
-width: 100% !important;
+/* Force the image to that same 120px width */
+width: 120px !important;
+max-width: 120px !important;
 height: auto !important;
-max-width: 150px !important;
 object-fit: cover;
 border-radius: 10px;
 margin: 0.5rem 0 !important;
