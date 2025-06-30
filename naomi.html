@@ -1,4 +1,9 @@
-
+<script>
+// Redirect to age-verification if not confirmed
+if (!localStorage.getItem('ageVerified')) {
+window.location = 'age-verification.html';
+}
+</script>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
