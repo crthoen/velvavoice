@@ -74,5 +74,37 @@ Your browser doesn’t support audio.
     <footer>
         <p>© 2025 Velva Voice | 18+ Only | <a href="mailto:support@velvavoice.com">support@velvavoice.com</a></p>
     </footer>
+       <script>
+const endpoint = 'https://script.google.com/macros/s/AKfycbz1yM7RD6uSIdo69Nmy-7Ej2DGZ7w1VqqxGAuheaTSNe7HnP5qCozvH1EXrTxrR77LT3w/exec';
+const form = document.getElementById('waitlist-form');
+const msg = document.getElementById('waitlist-msg');
+
+form.addEventListener('submit', e => {
+e.preventDefault();
+msg.textContent = 'Submitting…';
+fetch(endpoint, {
+method: 'POST',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({
+name: form.elements['name'].value.trim(),
+email: form.elements['email'].value.trim(),
+token: form.elements['token'].value
+})
+})
+.then(res => res.json())
+.then(data => {
+if (data.result === 'success') {
+msg.textContent = 'Thanks for joining! 🎉';
+form.reset();
+} else {
+msg.textContent = 'Error: ' + (data.error || 'Try again');
+}
+})
+.catch(err => {
+console.error(err);
+msg.textContent = 'Oops, try again later.';
+});
+});
+</script>
 </body>
 </html>
