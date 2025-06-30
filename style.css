@@ -135,3 +135,15 @@ border-radius: 10px !important;
 display: block;
 margin: 1rem auto !important;
 }
+/* ────────────────────────────────────────────
+Centered teaser cards with no extra gutter
+──────────────────────────────────────────── */
+#ai-girls {
+display: inline-flex !important; /* shrink-wrap to its children */
+flex-direction: row !important;
+flex-wrap: nowrap !important;
+gap: 1.5rem !important; /* space between cards */
+margin: 2rem auto !important; /* center the whole container */
+padding: 0 !important; /* remove side padding */
+justify-content: center !important; /* center within itself (optional) */
+}
