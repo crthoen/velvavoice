@@ -91,3 +91,47 @@ object-fit: cover !important;
 border-radius: 10px !important;
 margin: 0.5rem 0 !important;
 }
+/* ────────────────────────────────────────────
+1) ALWAYS horizontal teaser cards
+──────────────────────────────────────────── */
+#ai-girls {
+display: flex !important;
+flex-direction: row !important; /* row on all screen sizes */
+flex-wrap: nowrap !important; /* no wrapping */
+justify-content: center !important;
+align-items: flex-start !important;
+gap: 1.5rem !important;
+}
+
+/* ────────────────────────────────────────────
+2) Lock teaser card width at 300px
+──────────────────────────────────────────── */
+#ai-girls .girl {
+flex: none !important; /* disable grow/shrink */
+width: 300px !important; /* exact width */
+max-width: 300px !important;
+margin: 0 !important;
+}
+
+/* ensure the teaser image fills that width */
+#ai-girls .girl-photo {
+width: 100% !important;
+max-width: 100% !important;
+height: auto !important;
+object-fit: cover !important;
+border-radius: 10px !important;
+margin: 0.5rem 0 !important;
+}
+
+/* ────────────────────────────────────────────
+3) Match full-profile photos on ava.html / naomi.html
+──────────────────────────────────────────── */
+.profile-photo {
+width: 300px !important;
+max-width: 300px !important;
+height: auto !important;
+object-fit: cover !important;
+border-radius: 10px !important;
+display: block;
+margin: 1rem auto !important;
+}
