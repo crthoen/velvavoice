@@ -74,7 +74,7 @@ color: white !important;
 flex-shrink: 0 !important; /* Ensure override also prevents shrinking */
 from ace_tools import display_dataframe_to_user
 import pandas as pd
-/* ⚡️ Force Ava & Naomi cards to exactly 120px wide ⚡️ */
+}
 #ai-girls .girl {
 flex: none !important; /* disable grow & shrink */
 width: 120px !important; /* exact width */
