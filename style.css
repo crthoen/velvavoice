@@ -147,3 +147,34 @@ margin: 2rem auto !important; /* center the whole container */
 padding: 0 !important; /* remove side padding */
 justify-content: center !important; /* center within itself (optional) */
 }
+/* ────────────────────────────────────────────
+Centered, equal-sized teasers at 300px
+──────────────────────────────────────────── */
+
+/* 1) Full-width container that centers its items */
+#ai-girls {
+width: 100% !important;
+display: flex !important;
+justify-content: center !important;
+align-items: flex-start !important;
+gap: 1.5rem !important;
+padding: 2rem 1rem !important;
+box-sizing: border-box !important;
+margin: 0 auto !important;
+}
+
+/* 2) Lock each card to exactly 300px */
+#ai-girls .girl {
+flex: 0 0 300px !important;
+max-width: 300px !important;
+box-sizing: border-box !important;
+}
+
+/* 3) Force each image to fill its 300px card */
+#ai-girls .girl-photo {
+width: 100% !important;
+height: auto !important;
+object-fit: cover !important;
+border-radius: 10px !important;
+margin: 0.5rem 0 !important;
+}
