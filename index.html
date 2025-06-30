@@ -1,14 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velva Voice | Talk to Her. Feel Desired.</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velva Voice | Talk to Her. Feel Desired.</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
+<!-- Hero Header -->
+<header class="site-header">
 <div class="header-overlay">
 <h1>Velva Voice</h1>
 <p>Talk. Feel Desired. On-Demand.</p>
@@ -16,23 +16,24 @@
 </div>
 </header>
 
-    <section id="how-it-works">
-        <h2>How It Works</h2>
-        <ol>
-            <li><strong>Pick Your Voice</strong> – Choose Ava or Naomi.</li>
-            <li><strong>Start Talking</strong> – Real-time AI voice call.</li>
-            <li><strong>Pay As You Go</strong> – Load credits, talk freely.</li>
-        </ol>
-    </section>
+<!-- How It Works -->
+<section id="how-it-works">
+<h2>How It Works</h2>
+<ol>
+<li><strong>Pick Your Voice</strong> – Choose Ava or Naomi.</li>
+<li><strong>Start Talking</strong> – Real-time AI voice call.</li>
+<li><strong>Pay As You Go</strong> – Load credits, talk freely.</li>
+</ol>
+</section>
 
-   <section id="ai-girls">
+<!-- Meet Your Fantasy -->
+<section id="ai-girls">
 <h2>Meet Your Fantasy</h2>
 
 <!-- Ava Teaser -->
 <div class="girl">
 <h3>Ava</h3>
 <img src="assets/ava-spicy.jpeg" alt="Ava – Velva Voice" class="girl-photo">
-<!-- Updated audio tag: -->
 <audio controls>
 <source src="assets/Eva-demo.mp3" type="audio/mpeg">
 Your browser doesn’t support audio.
@@ -44,18 +45,16 @@ Your browser doesn’t support audio.
 <div class="girl">
 <h3>Naomi</h3>
 <img src="assets/naomi-spicy.jpeg" alt="Naomi – Velva Voice" class="girl-photo">
-<!-- Updated audio tag: -->
 <audio controls>
 <source src="assets/Naomi-demo.mp3" type="audio/mpeg">
 Your browser doesn’t support audio.
 </audio>
 <a href="naomi.html" class="cta">Learn More</a>
 </div>
+</section> <!-- closes #ai-girls -->
 
-  
-
+<!-- Pricing + Waitlist -->
 <section class="pricing-waitlist-container">
-
 <!-- PRICING -->
 <section id="pricing">
 <h2>Pricing</h2>
@@ -63,7 +62,7 @@ Your browser doesn’t support audio.
 <li>50 Credits – €9.99</li>
 <li>200 Credits – €34.99</li>
 <li>500 Credits – €74.99</li>
-<li>1 000 Credits – €124.99</li> <!-- Best seller -->
+<li>1 000 Credits – €124.99</li>
 </ul>
 </section>
 
@@ -84,23 +83,25 @@ target="hidden_iframe"
 </form>
 <p id="waitlist-msg"></p>
 </section>
+</section> <!-- closes .pricing-waitlist-container -->
 
-    <footer>
-        <p>© 2025 Velva Voice | 18+ Only | <a href="mailto:support@velvavoice.com">support@velvavoice.com</a></p>
-    </footer>
-</body>
+<!-- FOOTER -->
+<footer>
+<p>© 2025 Velva Voice | 18+ Only | <a href="mailto:support@velvavoice.com">support@velvavoice.com</a></p>
+</footer>
+
+<!-- Submission Script -->
 <script>
 const form = document.getElementById('waitlist-form');
 const msg = document.getElementById('waitlist-msg');
 
 form.onsubmit = () => {
 msg.textContent = 'Submitting…';
-// After 1.5s assume success (your script writes the data)
 setTimeout(() => {
 msg.textContent = 'Thanks for joining! 🎉';
 form.reset();
 }, 1500);
-return true; // allow the form to submit
+return true; // allow the iframe POST
 };
 </script>
 </body>
