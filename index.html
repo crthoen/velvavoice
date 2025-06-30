@@ -52,22 +52,25 @@ Your browser doesn’t support audio.
 <a href="naomi.html" class="cta">Learn More</a>
 </div>
 
-    <section id="pricing">
-        <h2>Pricing</h2>
-        <ul>
-            <li>50 Credits – €9.99</li>
-            <li>200 Credits – €34.99</li>
-            <li>500 Credits – €74.99</li>
-        </ul>
-        <a href="#start" class="cta">Get Credits</a>
-    </section>
+   <!-- …your existing “Meet Your Fantasy” section here… -->
 
+<section class="pricing-waitlist-container">
+
+<!-- PRICING -->
+<section id="pricing">
+<h2>Pricing</h2>
+<ul class="pricing-tiers">
+<li>50 Credits – €9.99</li>
+<li>200 Credits – €34.99</li>
+<li>500 Credits – €74.99</li>
+<li>1 000 Credits – €124.99</li> <!-- Best seller -->
+</ul>
+</section>
+
+<!-- WAITLIST FORM -->
+<section id="waitlist">
 <h2>Join the Waitlist</h2>
-
-<!-- Hidden iframe to catch the form submit -->
 <iframe name="hidden_iframe" style="display:none;"></iframe>
-
-<!-- Form: posts directly to your Apps Script URL -->
 <form
 id="waitlist-form"
 action="https://script.google.com/macros/s/AKfycbzRKtmBxRnP9a9ggfBzczzyOoUflFWPRLFrGJM7lYCTNUFmvBVG7VxqieplktcDYxBjTQ/exec"
@@ -76,11 +79,12 @@ target="hidden_iframe"
 >
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
-<input type="hidden"name="token" value="VelvaVoiceSecret2025!">
+<input type="hidden" name="token" value="VelvaVoiceSecret2025!">
 <button type="submit" class="cta">Join Now</button>
 </form>
-
 <p id="waitlist-msg"></p>
+</section>
+
 </section>
 
     <footer>
