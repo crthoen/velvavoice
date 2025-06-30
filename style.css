@@ -77,12 +77,12 @@ import pandas as pd
 }
 #ai-girls .girl {
 flex: none !important; /* disable grow & shrink */
-width: 120px !important; /* exact width */
-max-width: 120px !important; /* prevent any up-scaling */
+width: 300px !important; /* exact width */
+max-width: 300px !important; /* prevent any up-scaling */
 margin: 0 auto !important; /* center each card */
 }
 
-/* Make the image fill that 120px container */
+/* Make the image fill that 300px container */
 #ai-girls .girl-photo {
 width: 100% !important; /* fill the parent’s 120px */
 max-width: 100% !important; /* no wider than parent */
