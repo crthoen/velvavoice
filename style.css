@@ -129,35 +129,33 @@ header .cta {
 background-color: rgba(142, 68, 173, 0.9) !important;
 border: none !important;
 }
-<!-- …your existing “Meet Your Fantasy” section… -->
+/* ——————————————————————————————
+wrapper around Pricing + Waitlist
+—————————————————————————————— */
 
-<section class="pricing-waitlist-container">
-<!-- PRICING -->
-<section id="pricing">
-<h2>Pricing</h2>
-<ul class="pricing-tiers">
-<li>1 min call – $5</li>
-<li>5 min call – $20</li>
-<li>15 min call – $50</li>
-<li>30 min call – $100</li> <!-- new tier -->
-</ul>
-</section>
+/* 1) Mobile-first: stack vertically */
+.pricing-waitlist-container {
+display: flex;
+flex-direction: column;
+gap: 2rem; /* space between the two sections */
+margin: 4rem 0; /* breathing room above/below */
+}
 
-<!-- WAITLIST FORM -->
-<section id="waitlist">
-<h2>Join the Waitlist</h2>
-<iframe name="hidden_iframe" style="display:none;"></iframe>
-<form
-id="waitlist-form"
-action="https://script.google.com/macros/s/AKfycbzRKtmBxRnP9a9ggfBzczzyOoUflFWPRLFrGJM7lYCTNUFmvBVG7VxqieplktcDYxBjTQ/exec"
-method="POST"
-target="hidden_iframe"
->
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<input type="hidden" name="token" value="VelvaVoiceSecret2025!">
-<button type="submit" class="cta">Join Now</button>
-</form>
-<p id="waitlist-msg"></p>
-</section>
-</section>
+.pricing-waitlist-container > section {
+width: 100%;
+}
+
+/* 2) Desktop (≥768px): two‐column layout beneath MF */
+
+
+@media (min-width: 768px) {
+.pricing-waitlist-container {
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+}
+
+.pricing-waitlist-container > section {
+width: 48%;
+}
+}
