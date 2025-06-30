@@ -92,31 +92,37 @@ border-radius: 10px !important;
 margin: 0.5rem 0 !important;
 }
 /* ────────────────────────────────────────────
-1) ALWAYS horizontal teaser cards
+1) Ensure heading sits above, cards centered
 ──────────────────────────────────────────── */
 #ai-girls {
+text-align: center; /* keeps your H2 centered */
+}
+
+/* wrapper for the two teaser cards */
+.girls-wrapper {
 display: flex !important;
-flex-direction: row !important; /* row on all screen sizes */
-flex-wrap: nowrap !important; /* no wrapping */
-justify-content: center !important;
+flex-direction: row !important;
+justify-content: center !important; /* center cards horizontally */
 align-items: flex-start !important;
-gap: 1.5rem !important;
+gap: 1.5rem !important; /* space between them */
+margin-top: 1rem !important;
+padding: 0 !important;
+width: 100% !important;
+box-sizing: border-box !important;
 }
 
 /* ────────────────────────────────────────────
-2) Lock teaser card width at 300px
+2) Lock teaser cards at 300px wide
 ──────────────────────────────────────────── */
-#ai-girls .girl {
-flex: none !important; /* disable grow/shrink */
-width: 300px !important; /* exact width */
+.girls-wrapper .girl {
+flex: 0 0 300px !important; /* exact width */
 max-width: 300px !important;
-margin: 0 !important;
+box-sizing: border-box !important;
 }
 
-/* ensure the teaser image fills that width */
-#ai-girls .girl-photo {
+/* make each teaser image fill its card */
+.girls-wrapper .girl-photo {
 width: 100% !important;
-max-width: 100% !important;
 height: auto !important;
 object-fit: cover !important;
 border-radius: 10px !important;
@@ -124,7 +130,7 @@ margin: 0.5rem 0 !important;
 }
 
 /* ────────────────────────────────────────────
-3) Match full-profile photos on ava.html / naomi.html
+3) Match full‐profile photos on Ava/Naomi pages
 ──────────────────────────────────────────── */
 .profile-photo {
 width: 300px !important;
@@ -132,49 +138,6 @@ max-width: 300px !important;
 height: auto !important;
 object-fit: cover !important;
 border-radius: 10px !important;
-display: block;
+display: block !important;
 margin: 1rem auto !important;
-}
-/* ────────────────────────────────────────────
-Centered teaser cards with no extra gutter
-──────────────────────────────────────────── */
-#ai-girls {
-display: inline-flex !important; /* shrink-wrap to its children */
-flex-direction: row !important;
-flex-wrap: nowrap !important;
-gap: 1.5rem !important; /* space between cards */
-margin: 2rem auto !important; /* center the whole container */
-padding: 0 !important; /* remove side padding */
-justify-content: center !important; /* center within itself (optional) */
-}
-/* ────────────────────────────────────────────
-Centered, equal-sized teasers at 300px
-──────────────────────────────────────────── */
-
-/* 1) Full-width container that centers its items */
-#ai-girls {
-width: 100% !important;
-display: flex !important;
-justify-content: center !important;
-align-items: flex-start !important;
-gap: 1.5rem !important;
-padding: 2rem 1rem !important;
-box-sizing: border-box !important;
-margin: 0 auto !important;
-}
-
-/* 2) Lock each card to exactly 300px */
-#ai-girls .girl {
-flex: 0 0 300px !important;
-max-width: 300px !important;
-box-sizing: border-box !important;
-}
-
-/* 3) Force each image to fill its 300px card */
-#ai-girls .girl-photo {
-width: 100% !important;
-height: auto !important;
-object-fit: cover !important;
-border-radius: 10px !important;
-margin: 0.5rem 0 !important;
 }
