@@ -61,14 +61,25 @@ Your browser doesn’t support audio.
         </ul>
         <a href="#start" class="cta">Get Credits</a>
     </section>
-<section id="waitlist">
+t">
 <h2>Join the Waitlist</h2>
-<form id="waitlist-form">
+
+<!-- Hidden iframe to catch the form submit -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<!-- Form: posts directly to your Apps Script URL -->
+<form
+id="waitlist-form"
+action="YOUR_SCRIPT_URL"
+method="POST"
+target="hidden_iframe"
+>
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
-<input type="hidden" name="WAITLIST_TOKEN" value="VelvaVoiceSecret2025!">
+<input type="hidden"name="token" value="VelvaVoiceSecret2025!">
 <button type="submit" class="cta">Join Now</button>
 </form>
+
 <p id="waitlist-msg"></p>
 </section>
     <footer>
