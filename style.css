@@ -159,3 +159,19 @@ align-items: flex-start;
 width: 48%;
 }
 }
+/* 1. Make sure the page fills the viewport and has no default margins */
+html, body {
+height: 100%;
+margin: 0;
+}
+
+/* 2. Turn the body into a column-flex container */
+body {
+display: flex;
+flex-direction: column;
+}
+
+/* 3. Push the footer down */
+footer {
+margin-top: auto;
+}
