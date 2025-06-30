@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Buy Credits | Velva Voice</title>
+<link rel="stylesheet" href="style.css" />
+<!-- Stripe.js library -->
+<script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+<header>
+<!-- reuse your existing header markup -->
+<div class="header-overlay">
+<h1>Velva Voice</h1>
+<p>Talk. Feel Desired. On-Demand.</p>
+<a href="#start" class="cta">Start Your Call</a>
+</div>
+</header>
+
+<main>
+<h1>Buy Credits</h1>
+<p>Select a package:</p>
+<div class="tiers">
+<button data-credits="50" data-amount="999">50 Credits – €9.99</button>
+<button data-credits="200" data-amount="3499">200 Credits – €34.99</button>
+<button data-credits="500" data-amount="7499">500 Credits – €74.99</button>
+<button data-credits="1000" data-amount="12499">1 000 Credits – €124.99</button>
+</div>
+</main>
+
+<footer>
+<!-- reuse your existing footer markup -->
+<p>© 2025 Velva Voice | 18+ Only |
+<a href="mailto:support@velvavoice.com">support@velvavoice.com</a>
+</p>
+<nav class="footer-nav">
+<a href="privacy.html">Privacy Policy</a> |
+<a href="terms.html">Terms of Service</a> |
+<a href="cookies.html">Cookie Policy</a> |
+<a href="age-verification.html">Age Verification</a>
+</nav>
+</footer>
+
+<script>
+// Initialize Stripe with your Test publishable key
+const stripe = Stripe('pk_test_51RfhEGQVQ9xWyr415H3u5gnr4fQxy1GyfPq7TSPJugn4cE4Q4w2H1mjfcWKpzmI1ECd1UXvOGbxgZkhQ2TxvIyWK00TCPnSPcJ');
+
+document.querySelectorAll('.tiers button').forEach(btn => {
+btn.addEventListener('click', () => {
+const credits = btn.dataset.credits;
+const amount = btn.dataset.amount; // in cents
+
+fetch('/api/create-checkout-session', {
+method: 'POST',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ credits, amount })
+})
+.then(res => res.json())
+.then(({ sessionId }) => {
+return stripe.redirectToCheckout({ sessionId });
+})
+.then(result => {
+if (result.error) {
+alert(result.error.message);
+}
+})
+.catch(err => {
+console.error('Error creating checkout session:', err);
+alert('Unable to start checkout. Please try again.');
+});
+});
+});
+</script>
+</body>
+</html>
