@@ -42,10 +42,11 @@
 </nav>
 </footer>
 
-<script>
+  <script>
 // Initialize Stripe with your Test publishable key
 const stripe = Stripe('pk_test_51RfhEGQVQ9xWyr415H3u5gnr4fQxy1GyfPq7TSPJugn4cE4Q4w2H1mjfcWKpzmI1ECd1UXvOGbxgZkhQ2TxvIyWK00TCPnSPcJ');
 
+document.addEventListener('DOMContentLoaded', () => {
 document.querySelectorAll('.tiers button').forEach(btn => {
 btn.addEventListener('click', () => {
 const credits = btn.dataset.credits;
@@ -57,20 +58,20 @@ headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ credits, amount })
 })
 .then(res => res.json())
-.then(({ sessionId }) => {
-return stripe.redirectToCheckout({ sessionId });
-})
-.then(result => {
-if (result.error) {
-alert(result.error.message);
+.then(data => {
+console.log('SESSION RESPONSE:', data);
+if (data.sessionId) {
+return stripe.redirectToCheckout({ sessionId: data.sessionId });
+} else {
+// Show the real error returned by your function
+alert(data.error || data.detail || 'Unexpected response from server.');
 }
 })
 .catch(err => {
-console.error('Error creating checkout session:', err);
+console.error('Fetch error:', err);
 alert('Unable to start checkout. Please try again.');
 });
 });
 });
+});
 </script>
-</body>
-</html>
