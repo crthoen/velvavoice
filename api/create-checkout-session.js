@@ -1,3 +1,9 @@
+export default async function handler(req, res) {
+console.log('REQ BODY:', req.body); // log incoming data
+console.log('ENV KEY:', process.env.STRIPE_SECRET_KEY ? '‹present›' : '‹missing›');
+
+if (req.method !== 'POST') { … }
+
 import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
